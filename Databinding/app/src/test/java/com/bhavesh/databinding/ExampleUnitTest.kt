@@ -1,4 +1,4 @@
-package com.eric.databinding
+package com.bhavesh.databinding
 
 import org.junit.Test
 

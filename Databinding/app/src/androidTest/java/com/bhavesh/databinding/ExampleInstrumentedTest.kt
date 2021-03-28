@@ -1,4 +1,4 @@
-package com.eric.databinding
+package com.bhavesh.databinding
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
