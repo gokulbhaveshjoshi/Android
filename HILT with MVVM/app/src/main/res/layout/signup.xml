@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvScreenType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/sign_up"
+        android:textSize="85dp"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:layout_marginTop="25dp"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/tvScreenType">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLength="25"
+            android:maxLines="1"
+            android:inputType="textEmailAddress"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_email"
+            android:hint="@string/enter_your_email"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="20dp"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/tilEmail">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLength="25"
+            android:maxLines="1"
+            android:background="@android:color/transparent"
+            android:inputType="textEmailAddress"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:drawableStart="@drawable/ic_key"
+            android:hint="@string/enter_your_password"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="20dp"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/tilPassword">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLength="25"
+            android:maxLines="1"
+            android:background="@android:color/transparent"
+            android:inputType="textEmailAddress"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:drawableStart="@drawable/ic_key"
+            android:hint="@string/enter_your_confirm_password"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tilCPassword"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="25dp"
+        android:text="@string/sign_up"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
