@@ -12,7 +12,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.main_fragment.*
 import kotlinx.android.synthetic.main.persistent_bottom_sheet.*
 
-@Suppress("DEPRECATION")
+
 class MainFragment: Fragment(R.layout.main_fragment) {
 
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<LinearLayout>
@@ -23,7 +23,7 @@ class MainFragment: Fragment(R.layout.main_fragment) {
     }
 
     private fun bottom() {
-
+        // Modal Sheet
         bottomSheetDialogBtn.setOnClickListener{
             val nullParent: ViewGroup? = null
             val modalSheetView = layoutInflater.inflate(R.layout.fragment_modal_bottom_sheet,nullParent)
@@ -32,13 +32,13 @@ class MainFragment: Fragment(R.layout.main_fragment) {
             dialog?.show()
 
         }
-
+        // Modal Sheet using fragment
         bottomSheetDialogFragmentBtn.setOnClickListener {
             val modalbottomSheetFragment = ModalBottomSheet()
             modalbottomSheetFragment.show(childFragmentManager,modalbottomSheetFragment.tag)
         }
 
-        bottomSheetBehavior.setBottomSheetCallback(object: BottomSheetBehavior.BottomSheetCallback(){
+        bottomSheetBehavior.addBottomSheetCallback (object: BottomSheetBehavior.BottomSheetCallback(){
             override fun onStateChanged(bottomSheet: View, state: Int) {
                 print(state)
                 when (state) {
